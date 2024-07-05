@@ -749,7 +749,7 @@ for directory, files_in_directory in files.items():
             fmt.info("split", "File size is greater than 2GB. Splitting original file in chunks...")
 
             md5dict = []
-            CHUNK_SIZE = 120 * 1024 * 1024  # 120MB
+            CHUNK_SIZE = 1200 * 1024 * 1024  # 1200MB
             num_chunks = int(os.path.getsize(os.path.join(SOURCE_DIR, file['name'])) / CHUNK_SIZE)
             fmt.debug("split", f"File will be split in {num_chunks} chunks.")
 
